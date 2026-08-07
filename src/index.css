@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Editor Window Container */
+.editor-window {
+  border: 1px solid #212529 !important;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] .editor-window {
+  border-color: #ffffff !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Editor Header Bar */
+.editor-header {
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+[data-bs-theme="dark"] .editor-header {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* File Tab Title Input */
+.editor-title-input {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  outline: none;
+  padding: 2px 0px 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: auto !important;
+}
+
+/* Locked Extension Label */
+.editor-ext {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+  padding: 2px 6px 2px 0px;
+  user-select: none;
+}
+
+[data-bs-theme="dark"] .editor-ext {
+  color: #cbd5e1;
+}
+
+[data-bs-theme="dark"] .editor-title-input {
+  color: #cbd5e1;
+}
+
+.editor-title-input:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="dark"] .editor-title-input:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.editor-title-input:focus {
+  background: rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #475569;
+  border-radius: 4px 4px 0 0;
+}
+
+[data-bs-theme="dark"] .editor-title-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #cbd5e1;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Header Buttons Area */
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Header Action Button (Download & Copy) */
+.header-action-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-bs-theme="dark"] .header-action-btn {
+  color: #94a3b8;
+}
+
+.header-action-btn:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+[data-bs-theme="dark"] .header-action-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+.header-action-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Borderless Textarea inside the Window */
+.editor-textarea {
+  border: none !important;
+  border-radius: 0 !important;
+  resize: vertical;
+  background: transparent !important;
+  box-shadow: none !important;
+}
